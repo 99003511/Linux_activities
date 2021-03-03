@@ -1,10 +1,10 @@
-SRC = execlp.c\
+source = execlp.c\
 	main.c\
 
-INC = *.h
+include = *.h
 
-all: $(SRC)
-	gcc $(SRC) $(INC) -o a.out
+all: $(source)
+	gcc $(source) $(include) -o a.out
 
 run:
 	./a.out
