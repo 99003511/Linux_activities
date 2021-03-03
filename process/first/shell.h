@@ -1,5 +1,5 @@
-#ifndef __MINISHELL_H
-#define __MINISHELL_H
+#ifndef __SHELLL_H
+#define __SHELLL_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -7,6 +7,6 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-void MiniShell();
+void Shelll();
 
 #endif
