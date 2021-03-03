@@ -1,5 +1,5 @@
 #include "shell.h"
 int main() 
 { 
-void MiniShell(); 
+void Shelll(); 
 }
