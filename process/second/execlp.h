@@ -3,9 +3,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <unistd.h> /* for fork */
-#include <sys/types.h> /* for pid_t */
-#include <sys/wait.h> /* for wait */
+#include <unistd.h>
+//for forking
+#include <sys/types.h>
+///for pid_t 
+#include <sys/wait.h> 
+// for wait 
 
 void compile();
 
