@@ -4,8 +4,8 @@
 #define SQUARE(x) (x) * (x)
 
 int main() {
-  printf("Hello World\n");
-  printf("Thank You\n");
+  printf("hai this is sann\n");
+  printf("thank You\n");
   
   return 0;
 }
