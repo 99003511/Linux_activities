@@ -2,6 +2,6 @@
 
 int main()
 {
-  compile();
+  compile();   // this function is used to compile
   return 0;
 }
