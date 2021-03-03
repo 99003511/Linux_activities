@@ -1,17 +1,17 @@
 #include "shell.h"
 
-#define BUFFER_LEN 1024
+#define buffer_len 1024
 
-void MiniShell() {
-  char line[BUFFER_LEN]; // get command line
-  char *argv[100];       // user command
-  char *path = "/bin/";  // set path at bin
-  char progpath[20];     // full file path
-  int argc;              // arg count
+void Shelll() {
+  char line[buffer_len];          // to get command line
+  char *argv[100];                // user command
+  char *path = "/bin/";           // to set path at bin
+  char progpath[20];              //for full file path
+  int argc;                       //to get arg count
 
   while (1) {
 
-    printf("My shell>> "); // print shell prompt
+    printf("My shell>> ");      //to print shell prompt
 
     if (!fgets(line, BUFFER_LEN, stdin))
       break;
@@ -21,11 +21,11 @@ void MiniShell() {
     if (line[length - 1] == '\n')
       line[length - 1] = '\0';
 
-    if (strcmp(line, "exit") == 0) { // check if command is exit
+    if (strcmp(line, "exit") == 0) {      // check if the command is exiting
       break;
     }
 
-    char *token; // split command into separate strings
+    char *token;              // split the command into separate strings
     token = strtok(line, " ");
     int i = 0;
     while (token != NULL) {
@@ -33,16 +33,16 @@ void MiniShell() {
       token = strtok(NULL, " ");
       i++;
     }
-    argv[i] = NULL; // set last value to NULL for execvp
+    argv[i] = NULL;             // set the last value to NULL for execvp
 
     argc = i; // get arg count
     for (i = 0; i < argc; i++) {
-      printf("%s\n", argv[i]); // print command/args
+      printf("%s\n", argv[i]);            // print command/args
     }
-    strcpy(progpath, path);    // copy /bin/ to file path
-    strcat(progpath, argv[0]); // add program to path
+    strcpy(progpath, path);              // copy /bin/ to file path
+    strcat(progpath, argv[0]);             // add the program to path
 
-    for (i = 0; i < strlen(progpath); i++) { // delete newline
+    for (i = 0; i < strlen(progpath); i++) {    // delete newline
       if (progpath[i] == '\n') {
         progpath[i] = '\0';
       }
@@ -51,11 +51,11 @@ void MiniShell() {
 
     if (pid == 0) { // Child
       execvp(progpath, argv);
-      fprintf(stderr, "Child process could not do execvp\n");
+      fprintf(stderr, "Child process could not execvp\n");
 
     } else { // Parent
       wait(NULL);
-      printf("Child exited\n");
+      printf("Child got exited\n");
     }
   }
 }
