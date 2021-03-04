@@ -2,6 +2,6 @@
 
 int main()
 {
-  /* Get the current time*/
+  // to Get the current time
   getTime();
 }
