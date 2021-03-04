@@ -1,9 +1,9 @@
-SRC = *.c
+source = *.c
 
-INC = *.h
+include = *.h
 
-all: $(SRC)
-	g++ $(SRC) $(INC) -o a.out
+all: $(source)
+	g++ $(source) $(include) -o a.out
 
 run:
 	./a.out
