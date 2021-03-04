@@ -1,9 +1,9 @@
-SRC = *.c
+source = *.c
 
-INC = *.h
+include = *.h
 
-all: $(SRC)
-	gcc $(SRC) $(INC) -lpthread -o a.out
+all: $(source)
+	gcc $(source) $(include) -lpthread -o a.out
 
 run:
 	./a.out
