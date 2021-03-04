@@ -3,14 +3,14 @@
 int main()
 {
   bool c;
-  c = copyfile();
+  c = copyfile();    // COPY FILE FUNCTION
   if(c)
   {
-    printf("Content copied\n");
+    printf("Content is copied\n");
   }
   else
   {
-    printf("No content copied\n");
+    printf("No content copied as per now\n");
   }
   
   return 0;
