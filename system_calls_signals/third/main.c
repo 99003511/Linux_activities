@@ -2,5 +2,5 @@
 
 int main()
 {
-  childprocess();
+  childprocess(); // function for child process
 }
